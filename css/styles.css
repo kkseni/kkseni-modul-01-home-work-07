@@ -152,7 +152,7 @@ ul {
 }
 @media screen and (max-width: 767px) {
   .menu-list {
-    padding-top: 16px;
+    margin-top: 16px;
   }
   .menu-modal:not(:last-child) {
     margin-bottom: 40px;
@@ -196,7 +196,7 @@ ul {
     margin-right: 40px;
   }
 
-  .contacts-item {
+  .contacts-item:not(:last-child) {
     margin-bottom: 4px;
   }
   .logo {
@@ -252,8 +252,11 @@ ul {
   }
 }
 @media screen and (min-width: 1200px) {
+  .current::after {
+    top: 48px;
+  }
   .header-menu {
-    padding-bottom: 24px;
+    padding-bottom: 28px;
   }
   .logo {
     margin-right: 76px;
@@ -455,7 +458,7 @@ ul {
     gap: 72px 24px;
   }
   .advantages-item {
-    width: calc(100% / 2 - 48px);
+    width: calc(100% / 2 - 14px);
   }
 
   .advantages-title {
@@ -611,9 +614,6 @@ ul {
     padding: 0;
     gap: 24px;
   }
-  .team-item {
-    margin-bottom: 64px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .team {
@@ -640,7 +640,7 @@ ul {
   flex-wrap: wrap;
 }
 .costomers-item {
-  width: calc(100% / 2 - 14px);
+  width: calc((100% - 24px) / 2);
 }
 .costomers-link {
   width: 100%;
@@ -672,7 +672,7 @@ ul {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .costomers-item {
-    width: calc(100% / 3 - 24px);
+    width: calc((100% - 48px) / 3);
   }
   .costomers-list {
     gap: 72px 24px;
@@ -862,17 +862,19 @@ ul {
 @media screen and (min-width: 1200px) {
   .footer-container {
     text-align: start;
+    margin-right: 120px;
   }
   .socail-media {
     margin-bottom: 16px;
   }
   .content {
     display: flex;
+    justify-content: space-between;
   }
 
   .footer-form {
     padding: 0;
-    margin: 0 auto;
+
     text-align: start;
   }
   .footer-social {
@@ -884,7 +886,7 @@ ul {
     margin-right: 24px;
   }
   .form-name {
-    margin-top: 0px;
+    margin-top: 0;
   }
   .button-form-footer {
     margin-right: 0 auto;
@@ -892,16 +894,25 @@ ul {
 }
 
 /* Стилі для Портфоліо */
-
-.button-list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 72px;
+@media screen and (max-width: 767px) {
+  .button-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    margin-bottom: 48px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .button-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 72px;
+  }
+  .button-item:not(:last-child) {
+    margin-right: 24px;
+  }
 }
 
-.button-item:not(:last-child) {
-  margin-right: 24px;
-}
 .filters {
   padding: 12px 24px;
   border: 1px solid var(--text-footer);
@@ -923,6 +934,7 @@ ul {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
 .portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
@@ -930,12 +942,7 @@ ul {
 .example-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -24px;
-  margin-top: -48px;
-}
-.example-item {
-  margin-top: 48px;
-  margin-left: 24px;
+  gap: 48px;
 }
 
 .example-box {
@@ -987,6 +994,23 @@ ul {
 .example-text {
   line-height: 1.5;
   color: var(--second-text-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .example-list {
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+  .example-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .example-list {
+    gap: 48px 24px;
+  }
+  .example-item {
+    width: calc((100% - 48px) / 3);
+  }
 }
 /* modal and form */
 
