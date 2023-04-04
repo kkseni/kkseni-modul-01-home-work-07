@@ -76,6 +76,7 @@ ul {
   background-color: transparent;
 }
 .menu-logo {
+  font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -168,7 +169,7 @@ ul {
   .contacts-item:not(:last-child) {
     margin-bottom: 40px;
   }
-  .social-list {
+  .distance {
     margin-top: 48px;
   }
 }
@@ -183,8 +184,8 @@ ul {
     display: none;
   }
   .header-menu {
-    padding-top: 24px;
-    padding-bottom: 9px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
   .header-container {
     display: block;
@@ -238,7 +239,7 @@ ul {
     width: 100%;
     height: 4px;
     left: 0px;
-    top: 42px;
+    top: 44px;
 
     background: var(--button-hero-active);
     border-radius: 2px;
@@ -249,12 +250,16 @@ ul {
   }
   .contacts-list {
     margin-left: auto;
-    font-size: 16px;
+  }
+
+  .list-mail {
+    margin-left: auto;
+    font-size: 12px;
     line-height: 1.5;
     color: var(--second-text-color);
   }
-  .contacts-list:hover,
-  .contacts-list:focus {
+  .list-mail:hover,
+  .list-mail:focus {
     color: var(--button-hero-active);
   }
 }
@@ -353,6 +358,7 @@ ul {
     background-position: center;
     background-size: cover;
     max-width: 1440px;
+    padding: 188px 0;
     margin: 0 auto;
   }
 
@@ -648,12 +654,11 @@ ul {
 }
 .costomers-item {
   width: calc((100% - 24px) / 2);
+  height: 88px;
 }
 .costomers-link {
   width: 100%;
   height: 100%;
-  padding: 16px 42px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -699,7 +704,6 @@ ul {
   }
   .costomers-item {
     width: 168px;
-    height: 88px;
   }
 
   .costomers-item:not(:last-child) {
@@ -735,7 +739,7 @@ ul {
   color: var(--text-footer);
   line-height: 1.5;
   width: 264px;
-  margin: 16px auto;
+  margin: 16px auto 0;
 }
 .media-list {
   display: flex;
@@ -838,6 +842,7 @@ ul {
   .content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
   .footer-container {
     margin-right: 24px;
@@ -1040,8 +1045,8 @@ ul {
 }
 
 .modal {
-  width: 408px;
-  height: 576px;
+  width: 95%;
+  height: 95%;
   background-color: #ffffff;
   border-radius: 4px;
   position: absolute;
@@ -1053,6 +1058,12 @@ ul {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 72px 24px;
+}
+@media screen and (min-width: 420px) {
+  .modal {
+    width: 408px;
+    height: 576px;
+  }
 }
 .close-btn {
   width: 24px;
@@ -1146,8 +1157,7 @@ ul {
 }
 
 .input-form {
-  width: 360px;
-  height: 40px;
+  width: 100%;
   font-size: 14px;
   line-height: 1.33;
   color: var(--costomers-icon);
@@ -1181,8 +1191,7 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  width: 360px;
-  height: 120px;
+
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -1200,6 +1209,16 @@ ul {
   outline: none;
 }
 
+@media screen and (min-width: 420px) {
+  .input-form {
+    width: 360px;
+    height: 40px;
+  }
+  .input-comment {
+    width: 360px;
+    height: 120px;
+  }
+}
 .check {
   width: 8px;
   height: 8px;
