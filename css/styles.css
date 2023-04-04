@@ -255,7 +255,7 @@ ul {
   .list-mail {
     margin-left: auto;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 1.3;
     color: var(--second-text-color);
   }
   .list-mail:hover,
@@ -282,6 +282,12 @@ ul {
   }
   .contacts-item:not(:last-child) {
     margin-right: 40px;
+  }
+  .list-mail {
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--second-text-color);
   }
 }
 .hero {
